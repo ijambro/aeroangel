@@ -2,7 +2,7 @@
   "name": "aeroangel",
   "description": "App for AeroAngel to communicate with jet donors about required flights",
   "main": "expo-router/entry",
-  "version": "0.1",
+  "version": "0.1.0",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
