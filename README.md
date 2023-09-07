@@ -46,7 +46,11 @@ Workshop and App created by:
 1.  `cd <project name>`
 1.  `ls`
 
-## 3. (Optional) Push this project to a new Github Repository
+## 3. (Optional) Push this Project to a New Github Repository
+
+#### Prereqs
+
+- Login to github.com
 
 #### Instructions
 
@@ -62,12 +66,93 @@ git push -u origin main
 
 1. In GitHub, refresh the page to see if your project has been pushed to your new repo.
 
-## 10. Win the Hackathon!
+## 4. Open the Project in VS Code
+
+#### Instructions
+
+1. Open VS Code
+1. Open Folder in VS Code and select your new project folder
+1. Read the overview at https://docs.expo.dev/develop/project-structure/ and compare to the files and folders in your new project
+1. Double-click the file package.json. Study the list of scripts. We'll run one of those soon.
+
+## 5. Run the Project in the Terminal
+
+#### Instructions
+
+1.  In the command line terminal, which is already in the new project folder, run `npm start`
+
+> Note: this is the same as running `npm run start`, or running `expo start` if you have already installed Expo globally (using `npm install -g expo`)
+
+## 6. Launch Your App in the Web Browser
+
+#### Instructions
+
+1. In the command line terminal where Expo is running, type `w`
+1. Verify this has opened your web browser to http://localhost:8081, which should display your app!
+
+## 7. (Optional) Launch Your App in a USB-tethered Phone or Simulator
+
+#### Instructions
+
+1. In the command line terminal where Expo is running, type `i` for iOS or `a` for Android
+1. Select Yes to install or update the Expo Go app on the phone or simulator
+1. Verify this has opened your app on a USB-connected phone or running simulator!
+1. For more info, see: https://docs.expo.dev/get-started/expo-go/
+
+## 8. (Optional) Launch Your App on Your Own Real Phone (non-tethered)
+
+#### Prereq
+
+- Install Expo Go onto your phone from the App Store/Play Store
+- Your phone is connected to the same Wifi subnet as your laptop
+
+#### Instructions
+
+1. In the command line terminal where Expo is running, scroll upward to reveal the QR code
+1. On your iPhone, open the camera and scan the QR code
+1. On your Android phone, open Expo Go and scan the QR code
+1. Verify this opens your app on your phone!
+1. For more info, see: https://docs.expo.dev/get-started/expo-go/
+
+## 9. Explore and Modify the App Code
+
+#### Instructions
+
+1. Open app/(tabs)/index.tsx
+1. Change some text
+1. Save the file - it should update your preview automatically
+1. Open `app/(tabs)/\_layout.tsx`
+1. Change the tab icon (to see all available icon names, use to FontAwesome explorer: https://icons.expo.fyi/Index)
+1. Save the file - it should update your preview automatically
+
+## 9. Using styles
+
+#### Instructions
+
+1. Explain the "container" style
+1. Change backgroundColor
+1. Comment out justifyContent
+1. Create a style "header"
+1. Change one of the Text components to use style styles.header
+
+## 10. Add a button with an onPress handler
+
+#### Instructions
+
+1. Write a new function inside of the App function
+1. console.log a message inside the function
+1. Declare a `<button>` element with the `onPress` property pointing to your function. Example: `<button onPress={handlePress} />`
+1. Press the button
+1. Verify in the command line terminal that your console.log message was logged
+
+## 11. Win the Hackathon!
 
 #### Prereqs
 
 - Your knowledge from this workshop
 - A positive attitude
 - Some pizza
+
+#### Instructions
 
 1. Continue to build your React Native App!
