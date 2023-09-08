@@ -1,14 +1,38 @@
-import { StyleSheet } from 'react-native';
+import { useState } from "react";
+import { Button, StyleSheet } from "react-native";
 
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
+import { Text, View } from "../../components/Themed";
+import FlightList from "../../components/FlightList";
+import { Flight, FlightStatus } from "../../types/flight";
 
 export default function TabOneScreen() {
+  const [flights, setFlights] = useState<Array<Flight>>([]);
+
+  const addFlight = () => {
+    console.log("Adding flight...");
+    const newFlight: Flight = {
+      from: "RDU",
+      to: "DCA",
+      departure: new Date(),
+      provider: "flyExclusive",
+      status: FlightStatus.requested,
+    };
+
+    setFlights((currentFlights) => [...currentFlights, newFlight]);
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <Text style={styles.title}>All Flights</Text>
+      <View
+        style={styles.separator}
+        lightColor="#eee"
+        darkColor="rgba(255,255,255,0.1)"
+      />
+
+      <FlightList flights={flights}></FlightList>
+
+      <Button title="Add Flight" onPress={addFlight} color={"blue"} />
     </View>
   );
 }
@@ -16,16 +40,16 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   separator: {
     marginVertical: 30,
-    height: 1,
-    width: '80%',
+    height: 2,
+    width: "80%",
   },
 });
