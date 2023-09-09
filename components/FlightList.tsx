@@ -14,7 +14,7 @@ export default function ({ flights }: Props) {
   return (
     <View style={styles.flightContainer}>
       {flights.map((flight) => (
-        <>
+        <View key={flight.id}>
           <Text
             style={styles.flightText}
             lightColor="rgba(0,0,0,0.8)"
@@ -42,7 +42,7 @@ export default function ({ flights }: Props) {
             lightColor="#eee"
             darkColor="rgba(255,255,255,0.1)"
           />
-        </>
+        </View>
       ))}
     </View>
   );

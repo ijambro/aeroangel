@@ -8,9 +8,11 @@ import { Flight, FlightStatus } from "../../types/flight";
 export default function TabOneScreen() {
   const [flights, setFlights] = useState<Array<Flight>>([]);
 
-  const addFlight = () => {
+  // const addFlight = () => {
+  function addFlight() {
     console.log("Adding flight...");
     const newFlight: Flight = {
+      id: Math.trunc(Math.random() * 100000), // Random number from 0 to 100,000
       from: "RDU",
       to: "DCA",
       departure: new Date(),
@@ -19,7 +21,7 @@ export default function TabOneScreen() {
     };
 
     setFlights((currentFlights) => [...currentFlights, newFlight]);
-  };
+  }
 
   return (
     <View style={styles.container}>
