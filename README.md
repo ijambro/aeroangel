@@ -4,6 +4,8 @@ Workshop and App created by:
 
 🧑 Jake Palmer | 🛫 flyExclusive | 💻 Engineering | 📲 Mobile Apps Lead
 
+Please follow me on GitHub and star this repository if you like this workshop 👍
+
 ## About
 
 🛫 **[flyExclusive](https://www.flyexclusive.com)** is a North Carolina-based airline for private and charter jets.
@@ -22,9 +24,12 @@ Workshop and App created by:
 
 1. Open https://snack.expo.dev in a web browser
 1. Preview it on Web, on the right side of the screen
-1. Make a change to the message between the <Text> tags, and verify that the preview changes
-1. Add a new <Text> tag and write some text
-1. Set the Text element's style to styles.paragraph (same as the other)
+1. Make a change to the message between the `<Text>` tags, and verify that the preview changes
+1. Add a new `<Text>` tag below the other `<Text>`, and write some new text inside it. Does it appear?
+1. Set the new `<Text>` element's style to `styles.paragraph` (same as the other). Does the styling change?
+1. Create another style in the StyleSheet, copied from `styles.paragraph`, but changing the `textAlign` to `right`, and setting a `color` and `backgroundColor` value to any supported CSS color (examples include `green`, `navy`, `royalblue`, `black`, etc)
+1. Change your `<Text>` element to use the style you just created. Does the styling change?
+1. (Optional Challenge) Change the text that says "Local files and assets can be imported...". Hint: You can Command-Click on an element in the JSX to open its component.
 1. (Optional) Preview on a shared virtual iOS or Android device (there is a waiting time)
 1. (Optional) Preview on your actual device using Expo Go app. This requires installing the Expo Go app from the App Store/Play Store.
 
@@ -118,32 +123,27 @@ git push -u origin main
 
 #### Instructions
 
-1. Open app/(tabs)/index.tsx
+1. Open `app/(tabs)/index.tsx`
 1. Change some text
-1. Save the file - it should update your preview automatically
+1. Save the file - it should update your preview automatically. Which tab is updated?
+1. Open `app/(tabs)/two.tsx`
+1. Change some text
+1. Save the file - it should update your preview automatically. Which tab is updated?
 1. Open `app/(tabs)/\_layout.tsx`
-1. Change the tab icon (to see all available icon names, use to FontAwesome explorer: https://icons.expo.fyi/Index)
-1. Save the file - it should update your preview automatically
-
-## 9. Using styles
-
-#### Instructions
-
-1. Explain the "container" style
-1. Change backgroundColor
-1. Comment out justifyContent
-1. Create a style "header"
-1. Change one of the Text components to use style styles.header
+1. Change the `title` property of each `Tabs.Screen` element, save and preview your changes.
+1. Change the `TabBarIcon name` (to see all available icon names, use the FontAwesome explorer: https://icons.expo.fyi/Index). Save and preview your changes.
 
 ## 10. Add a button with an onPress handler
 
 #### Instructions
 
-1. Write a new function inside of the App function
-1. console.log a message inside the function
-1. Declare a `<button>` element with the `onPress` property pointing to your function. Example: `<button onPress={handlePress} />`
-1. Press the button
-1. Verify in the command line terminal that your console.log message was logged
+1. Open `app/(tabs)/index.tsx`
+1. Write a new function `handlePress` _inside_ of the function TabOneScreen
+1. In your new function, `console.log('button pressed!')`
+1. Declare a `<Button>` element with the `onPress` property pointing to your function. Example: `<Button onPress={handlePress} />`
+1. Does VS Code give you an error? See if it will suggest the _Quick Fix_ of importing `Button` from `react-native` to fix the error.
+1. Save and preview, then press the new button you added!
+1. Verify in the command line terminal that your console.log message was logged 👀
 
 ## 11. Win the Hackathon!
 
@@ -156,3 +156,5 @@ git push -u origin main
 #### Instructions
 
 1. Continue to build your React Native App!
+1. Remember that you can update text, styles, colors, tab names and icons!
+1. There's a lot more to a good mobile app, but this is a great start! 🚀
