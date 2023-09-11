@@ -37,8 +37,8 @@ Please follow me on GitHub and star this repository if you like this workshop ðŸ
 
 #### Prereqs
 
-- Node.js
-- Node Version Manager (nvm) (suggested)
+- [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm) (suggested)
+- Node.js (installed from nvm above, otherwise, [install just one version](https://nodejs.org/en/download))
 - VS Code (suggested)
 
 #### Instructions
@@ -87,6 +87,8 @@ git push -u origin main
 1.  In the command line terminal, which is already in the new project folder, run `npm start`
 
 > Note: this is the same as running `npm run start`, or running `expo start` if you have already installed Expo globally (using `npm install -g expo`)
+
+1. If the above command fails, run `npm install` and then `npm start` again
 
 ## 6. Launch Your App in the Web Browser
 
@@ -140,7 +142,7 @@ git push -u origin main
 1. Open `app/(tabs)/index.tsx`
 1. Write a new function `handlePress` _inside_ of the function TabOneScreen
 1. In your new function, `console.log('button pressed!')`
-1. Declare a `<Button>` element with the `onPress` property pointing to your function. Example: `<Button onPress={handlePress} />`
+1. Declare a `<Button>` element with the `onPress` property pointing to your function. Example: `<Button title="Press Me" onPress={handlePress} />`
 1. Does VS Code give you an error? See if it will suggest the _Quick Fix_ of importing `Button` from `react-native` to fix the error.
 1. Save and preview, then press the new button you added!
 1. Verify in the command line terminal that your console.log message was logged ðŸ‘€
